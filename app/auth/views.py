@@ -1,7 +1,7 @@
-from flask import render_template
+from flask import render_template,redirect,url_for
 from . import auth
-rom flask_login import login_user,logout_user,login_required
-from ..models import User
+from flask_login import login_user,logout_user,login_required
+from ..models import User,Admin
 from .forms import LoginForm,RegistrationForm
 from .. import db
 
