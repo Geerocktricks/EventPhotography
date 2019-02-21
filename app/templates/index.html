@@ -4,19 +4,278 @@
 {% block styles%}
 {{ super() }}
 <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {% endblock%}
 
 {% block content %}
     <body>
 
-        <h1>Please Work</h1>
+        <header>
+            <div class="overlay"></div>
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+              <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+            </video>
+            <div class="container h-100">
+              <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                  <img src="https://unixtitan.net/images/camera-clipart-black-and-white-png-5.png" alt="" style="height:200px; witdth:300px; color:#ffff">
+                  <h1 class="display-3" style="color:#ffff;font-family: 'Kaushan Script', cursive;line-height: 300px; font-size: 70px; margin-top:-140px ">PHOTO-PORTAL</h1>
+                  <a href="" class="btn btn-danger">PHOTOGRAPHER</a>
+                  <a href="{{url_for('auth.login')}}" class="btn btn-info">GUEST</a>
+                </div>
+              </div>
+            </div>
+        </header>
+        <div class="container content" style="margin-bottom:100px">
+          <h1 style="text-align:center; margin-top: 100px; margin-bottom:100px">CATEGORIES</h1>
+          <div class="category col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <img src="https://images.unsplash.com/photo-1544954766-cc536df31678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" style="height:300px; width:260px">
+            <p><a href="">Weddings</a></p>
+          </div>
+          <div class="category col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <img src="https://images.unsplash.com/photo-1505964135045-cdada2f6bf43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" style="height:300px; width:260px">
+            
+            <p><a href="">Concerts</a></p>
+          </div>
+          <div class="category col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" style="height:300px; width:260px">
+            <p><a href="">Team building events</a></p>
+          </div>
+          <div class="category col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <img src="https://www.corpgov.net/wp-content/uploads/2009/12/conference.jpeg" alt="" style="height:300px; width:260px">
+            <p><a href="">conferences</a></p>
+
+          </div>
+          <div class="category col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <img src="http://www.scottsdalepremierlimos.com/uploads/5/7/6/1/57618509/1439102_orig.jpg" alt="" style="height:300px; width:260px">
+            <p><a href="">sports events</a></p>
+          </div>
+
+          <div class="category col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <img src="https://images.unsplash.com/photo-1523753917948-e1cb9cbc5913?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""style="height:300px; width:260px">
+             <p><a href="">Promotion events</a></p>
+          </div>
+
+
+          <div class="category col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" style="height:300px; width:260px">
+              <p><a href="">party time events</a></p>
+            </div>
+
+            <div class="category col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <img src="https://images.unsplash.com/photo-1521961835394-3ffc4d600e40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" style="height:300px; width:260px">
+              <p><a href="">after party</a></p>
+            </div>
+            
+        </div>
+            
+        </div>
+        <div class="free-section">
+
+        </div>
+        <div class="subscribe">
+          <h1 style="text-align: center; margin-top: 100px">SUBSCRIBE TO GET UPDATES ON UPCOMING EVENTS</h1>
+          <form style="width:500px; margin: auto ; padding: 40px; margin-bottom:100px;margin-top:100px"  class="jumbotron">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary subscribe" onclick="subscribe()">Submit</button>
+            </form>
+            
+        </div>
+        <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+          <div class="container">
+            <div class="row row-30">
+              <div class="col-md-4 col-xl-5">
+                <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                  <p>We are Events and photography majoured ajency in Moringa Kenya . We hook up proffesional Photographers to the market and guests with their desired photos. We majourly focus on planning and marketing.</p>
+                  <!-- Rights-->
+                  <p class="rights"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>Events-Photography</span><span>. </span><span>All Rights Reserved.</span></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <h5>Contacts</h5>
+                <dl class="contact-list">
+                  <dt>Address:</dt>
+                  <dd>Ngong-Road Moringa school</dd>
+                </dl>
+                <dl class="contact-list">
+                  <dt>email:</dt>
+                  <dd><a href="mailto:#">eventsphotography@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="tel:#">+254 722 586 098</a> <span>or</span> <a href="tel:#">+254 708 486 367 </a>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links</h5>
+              <ul class="nav-list" style="display:inline; margin: 10px">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+        <style>
+          @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+          header {
+          position: relative;
+          background-color: black;
+          height: 75vh;
+          min-height: 25rem;
+          width: 100%;
+          overflow: hidden;
+          background-attachment: fixed;
+        }
+        .category img{
+          margin-right:10px;
+        }
         
+        header video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: 0;
+          -ms-transform: translateX(-50%) translateY(-50%);
+          -moz-transform: translateX(-50%) translateY(-50%);
+          -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+        }
+        
+        header .container {
+          position: relative;
+          z-index: 2;
+        }
+        
+        header .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: black;
+          opacity: 0.8;
+          z-index: 1;
+        }
+        .free-section{
+          height: 500px;
+          width: 100%;
+          background-attachment: fixed;
+          background-image: url("https://crokepark.ie/BlankSite/media/optimised/Home/EOTF-590.jpg?ext=.jpg");
+          background-repeat: no-repeat;
+        }
+        
+        @media (pointer: coarse) and (hover: none) {
+          header {
+            background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+          }
+          header video {
+            display: none;
+          }
+        }
+
+        .context-dark, .bg-gray-dark, .bg-primary {
+          color: rgba(255, 255, 255, 0.8);
+      }
+
+      .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+          color: #ffffff;
+      }
+      .nav-list li {
+          padding-top: 5px;
+          padding-bottom: 5px;
+      }
+
+      .nav-list li a:hover:before {
+          margin-left: 0;
+          opacity: 1;
+          visibility: visible;
+      }
+
+      ul, ol {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .social-inner {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding: 23px;
+    font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+    content: "\f14f";
+    font: 400 21px/1 "Material Design Icons";
+    color: #4d6de6;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: -28px;
+    margin-right: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .22s ease;
+}
+
+              
+              </style>
+              <script>
+              function subscribe(){
+                
+                            Swal.fire({
+                    position: 'top',
+                    type: 'success',
+                    title: 'You have been succesfully subsribed!!',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+              }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <script src="sweetalert2.all.min.js"></script>
     </body>
 {% endblock %}
-<style>
-body{
-          background-image: url("https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-          
 
-}
-</style>

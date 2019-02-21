@@ -1,0 +1,2 @@
+Hello {{user.username}} ,
+welcome to Events photography, Enjoy looking for events and viewing your pics
